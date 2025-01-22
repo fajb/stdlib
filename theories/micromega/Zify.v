@@ -30,9 +30,9 @@ Ltac zify_to_euclidean_division_equations :=
 
 Ltac zify := intros;
              zify_pre_hook ;
-             zify_elim_let ;
-             zify_op ;
-             (zify_iter_specs) ;
-             zify_saturate;
+             tify_elim_let ;
+             tify_op BinInt.Z;
+             (tify_iter_specs) ;
+             tify_saturate;
              zify_to_euclidean_division_equations ;
              zify_post_hook.
