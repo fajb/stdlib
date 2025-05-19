@@ -886,10 +886,8 @@ Proof.
   apply derivable_pt_recip_interv_prelim0 with
     (f:=f) (lb:=f lb) (ub:=f ub)
     (Prf:=f_derivable2) (Prg_incr:=g_incr2).
-  - apply continuity_pt_recip_interv with (f:=f) (lb:=lb) (ub:=ub) ; intuition.
-    + apply derivable_continuous_pt ; apply f_derivable ; intuition.
-    + exact (proj1 x_encad).
-    + exact (proj2 x_encad).
+  - apply continuity_pt_recip_interv with (f:=f) (lb:=lb) (ub:=ub); try tauto.
+    + intros; apply derivable_continuous_pt ; apply f_derivable; tauto.
   - apply f_incr ; intuition.
   - assumption.
   - intros x0 x0_encad ; apply f_eq_g ; intuition.
